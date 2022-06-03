@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 /*
  * 날짜 : 2022/06/03
  * 이름 : 송환욱
- * 내용 : 조건문 Switch 실습 교재 p127
+ * 내용 : 조건문 Switch 실습 교재 p138
  */
 
 namespace Ch03
 {
     internal class _2_Switch
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Console.Write("점수 입력 : ");
             string strscore = Console.ReadLine();
