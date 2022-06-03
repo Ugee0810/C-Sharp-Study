@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book.Ch02
+namespace Backjun._01단계
 {
-    internal class P117
+    internal class Main1_01
     {
         static void Main1(string[] args)
         {
-            // int 자료형 최솟값의 음수
-            int output = int.MinValue;
-            Console.WriteLine(-output);
+            Console.WriteLine("Hello World!");
         }
     }
 }
