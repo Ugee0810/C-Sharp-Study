@@ -1,2 +1,1 @@
-# C-Study
 # CS-Study
