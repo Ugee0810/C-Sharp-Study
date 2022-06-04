@@ -8,7 +8,7 @@ namespace Backjun._01단계
 {
     internal class Main1_01
     {
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
