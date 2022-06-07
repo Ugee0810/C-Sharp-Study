@@ -9,7 +9,7 @@ using System.Threading.Tasks;
  * 이름 : 송환욱
  * 내용 : 반복문 실습 교재 p162
  */
-
+/*
 namespace Ch03
 {
     internal class _4_While
@@ -73,3 +73,4 @@ namespace Ch03
         }
     }
 }
+*/
