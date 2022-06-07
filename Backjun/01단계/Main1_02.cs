@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
 namespace Backjun._01단계
 {
     internal class Main1_02
@@ -14,3 +15,4 @@ namespace Backjun._01단계
         }
     }
 }
+*/

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 /*
 문제
 (A×B)%C는 ((A%C) × (B%C))%C 와 같을까?
@@ -15,22 +16,25 @@ using System.Threading.Tasks;
 출력
 첫째 줄에 (A+B)%C, 둘째 줄에 ((A%C) + (B%C))%C, 셋째 줄에 (A×B)%C, 넷째 줄에 ((A%C) × (B%C))%C를 출력한다.
  */
-namespace Backjun._01단계
+/*
+namespace House.백준.Lv1
 {
-    internal class Main1_12
+    internal class Main1_12 
     {
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
-            String[] str = Console.ReadLine().Split();
-            int A = int.Parse(str[0]);
-            int B = int.Parse(str[1]);
-            int C = int.Parse(str[2]);
+            //입력
+            String[] strings = Console.ReadLine().Split();
+            int A = int.Parse(strings[0]);
+            int B = int.Parse(strings[1]);
+            int C = int.Parse(strings[2]);
 
-            // 출력
+            //출력
             Console.WriteLine((A + B) % C);
             Console.WriteLine(((A % C) + (B % C)) % C);
-            Console.WriteLine((A*B) % C);
+            Console.WriteLine((A * B) % C);
             Console.WriteLine(((A % C) * (B % C)) % C);
         }
     }
 }
+*/

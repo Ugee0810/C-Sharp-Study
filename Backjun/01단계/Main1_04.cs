@@ -4,6 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * 
+ * |\_/|
+ * |q p|   /}
+ * ( 0 )"""\
+ * |"^"`    |
+ * ||_/=\\__|
+ */
+
+/*
 namespace Backjun._01단계
 {
     internal class Main1_04
@@ -18,11 +28,4 @@ namespace Backjun._01단계
         }
     }
 }
-/*
- * 
- * |\_/|
- * |q p|   /}
- * ( 0 )"""\
- * |"^"`    |
- * ||_/=\\__|
- */
+*/
