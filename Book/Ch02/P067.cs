@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
 namespace Book.Ch02
 {
     internal class P067
     {
-        
-        static void Main67(string[] args)
+        static void Main(string[] args)
         {
             // 실수
             Console.WriteLine(52.273);
@@ -20,3 +19,4 @@ namespace Book.Ch02
         }
     }
 }
+*/

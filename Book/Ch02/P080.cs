@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
 namespace Book.Ch02
 {
     internal class P080
     {
-        // 정수 변수 생성
-        static void Main25(string[] args)
+        static void Main(string[] args)
         {
+            // 정수 변수 생성
             int A = 273;
             int B = 52;
 
@@ -22,3 +22,4 @@ namespace Book.Ch02
         }
     }
 }
+*/

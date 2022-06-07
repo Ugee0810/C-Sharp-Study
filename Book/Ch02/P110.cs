@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
 namespace Book.Ch02
 {
     internal class P110
     {
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
             //// 문자열을 숫자로 변환
             // string -> int 자료형 변환
@@ -18,3 +18,4 @@ namespace Book.Ch02
         }
     }
 }
+*/

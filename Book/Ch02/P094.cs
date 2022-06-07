@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
 namespace Book.Ch02
 {
     internal class P094
     {
-        static void Main94(string[] args)
+        static void Main(string[] args)
         {
             // 증감 연산자의 후위 형태
             int a = 10;
@@ -26,3 +26,4 @@ namespace Book.Ch02
         }
     }
 }
+*/

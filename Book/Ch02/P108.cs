@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
 namespace Book.Ch02
 {
     internal class P108
     {
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
             // 강제 자료형 변환의 데이터 손실(오버플로우) 미발생
             // long -> int
@@ -29,3 +29,4 @@ namespace Book.Ch02
         }
     }
 }
+*/

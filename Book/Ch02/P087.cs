@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
 namespace Book.Ch02
 {
     internal class P087
     {
-        // 문자열 변수 생성
-        static void Main87(string[] args)
+        static void Main(string[] args)
         {
+            // 문자열 변수 생성
             string message = "안녕하세요.";
 
             Console.WriteLine(message + "!");
@@ -20,3 +20,4 @@ namespace Book.Ch02
         }
     }
 }
+*/

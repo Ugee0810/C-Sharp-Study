@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
 namespace Book.Ch02
 {
     internal class P068
     {
         //실수와 사칙 연산자
-        static void Main13(string[] args)
+        static void Main(string[] args)
         {
             Console.WriteLine(1.0 + 2.0);
             Console.WriteLine(1.0 - 2.0);
             Console.WriteLine(1.0 * 2.0);
             Console.WriteLine(1.0 / 2.0);
         }
+
         //실수와 나머지 연산자
         static void Main14(string[] args)
         {
@@ -23,3 +24,4 @@ namespace Book.Ch02
         }
     }
 }
+*/

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
 namespace Book.Ch02
 {
     internal class P096
     {
-        static void Main96(string[] args)
+        static void Main(string[] args)
         {
             // 증감 연산자 이해도 확인
             int a = 10;
@@ -30,3 +30,4 @@ namespace Book.Ch02
         }
     }
 }
+*/

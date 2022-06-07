@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Book", "Book\Book.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ch03", "Ch03\Ch03.csproj", "{2676E847-6E56-47CF-9CF0-92208A9F9C92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backjun", "Backjun\Backjun.csproj", "{FFC30AF6-060F-4E20-A21A-B4309861D939}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Backjun", "Backjun\Backjun.csproj", "{FFC30AF6-060F-4E20-A21A-B4309861D939}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ch04", "Ch04\Ch04.csproj", "{0AF29E06-19DF-48E2-8623-A34AE910C2DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{FFC30AF6-060F-4E20-A21A-B4309861D939}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFC30AF6-060F-4E20-A21A-B4309861D939}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFC30AF6-060F-4E20-A21A-B4309861D939}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AF29E06-19DF-48E2-8623-A34AE910C2DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AF29E06-19DF-48E2-8623-A34AE910C2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AF29E06-19DF-48E2-8623-A34AE910C2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AF29E06-19DF-48E2-8623-A34AE910C2DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
