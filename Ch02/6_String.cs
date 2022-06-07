@@ -10,11 +10,12 @@ using System.Threading.Tasks;
  * 내용 : 문자열(String) 처리 실습 교재 p112
  */
 
+/*
 namespace Ch02
 {
     internal class _6_String
     {
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
             string greeting = "Good Morning";
             Console.WriteLine("greeting : "+ greeting);
@@ -83,3 +84,4 @@ namespace Ch02
         }
     }
 }
+*/

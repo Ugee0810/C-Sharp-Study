@@ -16,12 +16,13 @@ using System.Threading.Tasks;
  * - 변환할 수 없는 데이터
  */
 
+/*
 namespace Ch02
 {
     internal class _1_Variable
     {
         // svm + tabtab = static void Main(string[] args) { }
-    static void Main1(string[] args)
+    static void Main(string[] args)
         {
             /////////////////////////
             // 변수
@@ -48,3 +49,4 @@ namespace Ch02
         }
     }
 }
+*/

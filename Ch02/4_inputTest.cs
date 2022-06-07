@@ -10,11 +10,12 @@ using System.Threading.Tasks;
  * 내용 : C# 입력 연습하기 교재 p104
  */
 
+/*
 namespace Ch02
 {
     internal class _4_inputTest
     {
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {   
             // 이름 입력
             Console.Write("이름 : ");
@@ -36,3 +37,4 @@ namespace Ch02
         }
     }
 }
+*/

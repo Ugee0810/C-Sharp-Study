@@ -9,11 +9,13 @@ using System.Threading.Tasks;
  * 이름 : 송환욱
  * 내용 : 데이터 형식 변환 실습 교재 p105
  */
+
+/*
 namespace Ch02
 {
     internal class _5_Conversion
     {
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
             // 작은 변수에서 큰 변수로 변환
             byte num1 = 255;
@@ -62,3 +64,4 @@ namespace Ch02
         }
     }
 }
+*/

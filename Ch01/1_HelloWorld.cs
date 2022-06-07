@@ -10,6 +10,7 @@ using System.Threading.Tasks;
  * 내용 : C# 개발 환경 및 HelloWorld 출력 교재 p44
  */
 
+/*
 namespace Ch01
 {
     internal class _1_HelloWorld
@@ -30,3 +31,4 @@ namespace Ch01
         }
     }
 }
+*/

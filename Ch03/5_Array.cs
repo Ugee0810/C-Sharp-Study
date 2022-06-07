@@ -10,6 +10,7 @@ using System.Threading.Tasks;
  * 내용 : 배열 실습 교재 p157
  */
 
+/*
 namespace Ch03
 {
     internal class _5_Array
@@ -98,6 +99,7 @@ namespace Ch03
                             { 25, 26, 27 } 
                             } 
                             };
+
             Console.WriteLine("arr3d[0, 0, 2] : " + arr3d[0, 0, 2]); // 3
             Console.WriteLine("arr3d[0, 1, 1] : " + arr3d[0, 1, 1]); // 5
             Console.WriteLine("arr3d[1, 0, 1] : " + arr3d[1, 0, 1]); // 11
@@ -106,3 +108,4 @@ namespace Ch03
         }
     }
 }
+*/

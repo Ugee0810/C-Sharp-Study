@@ -13,11 +13,13 @@ using System.Threading.Tasks;
  * - 변수에 저장된 데이터의 처리를 위해 연산자를 사용
  * - 연산자는 크게 산술, 증가/감소, 복합대입, 비교, 논리 연산자 등이 있다.
  */
+
+/*
 namespace Ch02
 {
     internal class _3_Operator
     {
-        static void Main1(string[] args)
+        static void Main(string[] args)
         {
             // 산술 연산자
             int num1 = 1;
@@ -108,3 +110,4 @@ namespace Ch02
         }
     }
 }
+*/
