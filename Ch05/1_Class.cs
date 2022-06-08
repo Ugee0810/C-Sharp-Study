@@ -13,7 +13,7 @@ using System.Threading.Tasks;
  * - 클래스는 객체를 생성하는 구조체이며, 필드와 메서드로 구분된다.
  * - 객체는 클래스의 실제 인스턴스이며, new 연산자로 생성한다.
  */
-
+/*
 namespace Ch05
 {
     internal class _1_Class
@@ -69,3 +69,4 @@ namespace Ch05
         }
     }
 }
+*/
