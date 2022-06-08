@@ -1,0 +1,15 @@
+C:\Users\1302\Desktop\Study\Programmers\bin\Debug\net6.0\Programmers.exe
+C:\Users\1302\Desktop\Study\Programmers\bin\Debug\net6.0\Programmers.deps.json
+C:\Users\1302\Desktop\Study\Programmers\bin\Debug\net6.0\Programmers.runtimeconfig.json
+C:\Users\1302\Desktop\Study\Programmers\bin\Debug\net6.0\Programmers.dll
+C:\Users\1302\Desktop\Study\Programmers\bin\Debug\net6.0\Programmers.pdb
+C:\Users\1302\Desktop\Study\Programmers\obj\Debug\net6.0\Programmers.csproj.AssemblyReference.cache
+C:\Users\1302\Desktop\Study\Programmers\obj\Debug\net6.0\Programmers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1302\Desktop\Study\Programmers\obj\Debug\net6.0\Programmers.AssemblyInfoInputs.cache
+C:\Users\1302\Desktop\Study\Programmers\obj\Debug\net6.0\Programmers.AssemblyInfo.cs
+C:\Users\1302\Desktop\Study\Programmers\obj\Debug\net6.0\Programmers.csproj.CoreCompileInputs.cache
+C:\Users\1302\Desktop\Study\Programmers\obj\Debug\net6.0\Programmers.dll
+C:\Users\1302\Desktop\Study\Programmers\obj\Debug\net6.0\refint\Programmers.dll
+C:\Users\1302\Desktop\Study\Programmers\obj\Debug\net6.0\Programmers.pdb
+C:\Users\1302\Desktop\Study\Programmers\obj\Debug\net6.0\Programmers.genruntimeconfig.cache
+C:\Users\1302\Desktop\Study\Programmers\obj\Debug\net6.0\ref\Programmers.dll
