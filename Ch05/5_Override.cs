@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- * 날짜 : 2022/06/08
+ * 날짜 : 2022/06/09
  * 이름 : 송환욱
  * 내용 : 오버라이드 실습하기 교재 p361
  * 오버라이드(Override)
