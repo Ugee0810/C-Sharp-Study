@@ -10,12 +10,12 @@ using System.Threading.Tasks;
  * 내용 : Method 실습 교재 p265
  * 메모 : C# Method 이름의 시작은 항상 대문자
  */
-/*
+
 namespace Ch04
 {
     internal class _1_Method
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //////Method 호출
             //(1)
@@ -59,4 +59,3 @@ namespace Ch04
         }
     }
 }
-*/

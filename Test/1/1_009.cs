@@ -36,6 +36,6 @@ namespace Test._1
 				}
 				Console.WriteLine();
 			}
-		D}
+		}
 	}
 }

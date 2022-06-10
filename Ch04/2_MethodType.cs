@@ -9,12 +9,12 @@ using System.Threading.Tasks;
  * 이름 : 송환욱
  * 내용 : MethodType 실습 교재 p265
  */
-/*
+
 namespace Ch04
 {
     internal class _2_MethodType
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //Type1 호출
             double y1 = Type1(0.1); //인자값 0.1 대입
@@ -75,4 +75,3 @@ namespace Ch04
         }
     }
 }
-*/

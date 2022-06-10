@@ -27,11 +27,8 @@ namespace Backjun._03단계
 
             for (int i = 1; i <= 9; i++)
             {
-                for (int j = 1; j <= 9; j++)
-                {
-                    int z = i * j;
-                    Console.WriteLine("{0} x {1} = {2}", i, j, z);
-                }
+                int z = num * i;
+                Console.WriteLine("{0} * {1} = {2}", num, i, z);
             }
         }
     }
