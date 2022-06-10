@@ -19,12 +19,11 @@ using System.Threading.Tasks;
  * - 자주 사용하는 것 -> int, double, bool, string, var
  */
 
-/*
 namespace Ch02
 {
     internal class _2_DataType
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //정수형
             sbyte num1 = 127;
@@ -101,4 +100,3 @@ namespace Ch02
         }
     }
 }
-*/

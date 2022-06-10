@@ -9,12 +9,12 @@ using System.Threading.Tasks;
  * 이름 : 송환욱
  * 내용 : 
  */
-/*
+
 namespace Ch04
 {
     internal class MethodStack
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             int result = 0; //push
             int n1 = 1;     //push
@@ -22,7 +22,7 @@ namespace Ch04
 
             result = Sum(n1, n2);
 
-            Console.WriteLine("Result : " +result);
+            Console.WriteLine("Result : " + result);
         }
 
         public static int Sum(int start, int end)
@@ -37,4 +37,3 @@ namespace Ch04
         }
     }
 }
-*/

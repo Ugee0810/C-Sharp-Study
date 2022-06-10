@@ -10,12 +10,11 @@ using System.Threading.Tasks;
  * 내용 : 배열 실습 교재 p157
  */
 
-/*
 namespace Ch03
 {
     internal class _5_Array
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //배열 기본
             int[] arr1 = new int[3];
@@ -25,37 +24,37 @@ namespace Ch03
             arr1[2] = 3;
 
             //배열 출력
-            for (int i=0; i<3; i++)
+            for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine("arr1 {0}번째 데이터 : {1}", i+1, arr1[i]) ;
+                Console.WriteLine("arr1 {0}번째 데이터 : {1}", i + 1, arr1[i]) ;
             }
 
             //배열 생성 초기화
-            int[]    nums = { 1, 2, 3, 4, 5 };
-            char[]   chars = { 'A', 'B', 'C' };
+            int[]    nums   = { 1, 2, 3, 4, 5 };
+            char[]   chars  = { 'A', 'B', 'C' };
             string[] cities = { "서울", "대전", "대구", "부산", "광주" };
 
             //배열 길이
-            Console.WriteLine("nums 길이 : "+nums.Length); //output : 5 (원소 갯수)
-            Console.WriteLine("chars 길이 : "+chars.Length); //output : 3
-            Console.WriteLine("cities 길이 : "+cities.Length); //output : 5
+            Console.WriteLine("nums 길이 : "  + nums.Length);   //output : 5 (원소 갯수)
+            Console.WriteLine("chars 길이 : " + chars.Length);  //output : 3
+            Console.WriteLine("cities 길이 : "+ cities.Length); //output : 5
 
             //배열 반복문(foreach 사용)
             foreach (int num in nums) // 앞 : 원소 / 뒤 : 배열 길이를 원소(앞)에 대입
             {
-                Console.WriteLine(num+" ");
+                Console.WriteLine(num + " ");
             }
             Console.WriteLine();
 
             foreach (char c in chars)
             {
-                Console.WriteLine(c+" ");
+                Console.WriteLine(c + " ");
             }
             Console.WriteLine();
 
             foreach (string city in cities)
             {
-                Console.WriteLine(city+" ");
+                Console.WriteLine(city + " ");
             }
             Console.WriteLine();
 
@@ -69,12 +68,12 @@ namespace Ch03
             {
                 total += num;
             }
-            Console.WriteLine("arr1d 총합 : "+total);
+            Console.WriteLine("arr1d 총합 : " + total);
 
             //2차원 배열(행렬)
-            int[,] arr2d = { { 1, 2, 3, 4 }, 
-                             { 5, 6, 7, 8 }, 
-                             { 9,10,11,12 } };
+            int[,] arr2d = { { 1,  2,  3,  4 }, 
+                             { 5,  6,  7,  8 }, 
+                             { 9, 10, 11, 12 } };
 
             Console.WriteLine("arr2d[0, 0] : " + arr2d[0, 0]); // 1
             Console.WriteLine("arr2d[0, 2] : " + arr2d[0, 2]); // 3
@@ -84,7 +83,7 @@ namespace Ch03
             //3차원 배열(큐브 행렬)
             int[,,] arr3d = { 
                             { 
-                            { 1, 2, 3},
+                            { 1, 2, 3 },
                             { 4, 5, 6 },
                             { 7, 8, 9 } 
                             },
@@ -108,4 +107,3 @@ namespace Ch03
         }
     }
 }
-*/

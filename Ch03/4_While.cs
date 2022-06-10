@@ -10,27 +10,26 @@ using System.Threading.Tasks;
  * 내용 : 반복문 실습 교재 p162
  */
 
-/*
 namespace Ch03
 {
     internal class _4_While
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //1부터 10까지의 합
             int sum = 0;
-            int k = 1;
+            int k   = 1;
 
             while (k <= 10)
             {
                 sum += k;
                 k++;
             }
-            Console.WriteLine("1부터 10까지의 합 : "+sum);
+            Console.WriteLine("1부터 10까지의 합 : " + sum);
 
             //do ~ while : 최초 1번은 무조건 반복 실행하는 반복문
             int total = 0;
-            int i = 1;
+            int i     = 1;
             do
             {
                 if (i % 2 == 0)
@@ -40,7 +39,7 @@ namespace Ch03
                 i++;
             }
             while (i <= 10);
-            Console.WriteLine("1부터 10까지의 짝수합 : "+total);
+            Console.WriteLine("1부터 10까지의 짝수합 : " + total);
 
             //break : 흐름제어
             int num = 1;
@@ -53,11 +52,11 @@ namespace Ch03
                 }
                 num++;
             }
-            Console.WriteLine("5와 7의 최소공배수 : "+num);
+            Console.WriteLine("5와 7의 최소공배수 : " + num);
 
             //continue : 흐름제어
             int tot = 0;
-            int j = 0;
+            int j   = 0;
 
             while (j <= 10)
             {
@@ -70,8 +69,7 @@ namespace Ch03
 
                 tot += j;
             }
-            Console.WriteLine("1부터 10까지의 짝수합 : "+tot);
+            Console.WriteLine("1부터 10까지의 짝수합 : " + tot);
         }
     }
 }
-*/

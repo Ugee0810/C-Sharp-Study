@@ -15,12 +15,12 @@ using System.Threading.Tasks;
  * - 상속관계에서 부모 클래스의 기능이 자식 클래스에서 여러 기능으로 변하는 특성
  * - 생성된 객체의 타입선언을 부모 클래스 타입으로 선언하는 것
  */
-/*
+
 namespace Ch05
 {
     internal class _6_Polymorphism
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //다양성을 적용한 객체 생성 : 클래스 타입 -> 부모 클래스 타입으로 선언
             //부모 클래스를 virtual, 아들 클래스를 override하여 덮어씌움
@@ -61,4 +61,3 @@ namespace Ch05
         }
     }
 }
-*/

@@ -14,12 +14,12 @@ using System.Threading.Tasks;
  * - 캡슐화를 위한 접근 제한자 public, private, protected를 제공한다.
  * - 은닉된 정보의 안전한 제공을 위해 Getter와 Setter를 제공한다(프로퍼티)
  */
-/*
+
 namespace Ch05
 {
     internal class _2_Encaps
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //캡슐화로 취약코드 예방
             //초기화를 위해 생성자가 필요
@@ -62,4 +62,3 @@ namespace Ch05
         }
     }
 }
-*/

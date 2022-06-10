@@ -18,7 +18,7 @@ using System.Threading.Tasks;
  * - 하나의 인스턴스만을 갖도록 보장하는 객체
  * - 이를 활용하여 메모리 절약 및 성능 향상 기대 가능
  */
-/*
+
 namespace Ch05
 {
     class Increment
@@ -44,7 +44,7 @@ namespace Ch05
 
     internal class _3_Static
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Increment inc1 = new Increment();
             Increment inc2 = new Increment();
@@ -74,11 +74,10 @@ namespace Ch05
             int r3 = c3.Multi(3, 2);
             int r4 = c4.Div(4, 2);
 
-            Console.WriteLine("r1 : "+r1);
-            Console.WriteLine("r2 : "+r2);
-            Console.WriteLine("r3 : "+r3);
-            Console.WriteLine("r4 : "+r4);
+            Console.WriteLine("r1 : " + r1);
+            Console.WriteLine("r2 : " + r2);
+            Console.WriteLine("r3 : " + r3);
+            Console.WriteLine("r4 : " + r4);
         }
     }
 }
-*/

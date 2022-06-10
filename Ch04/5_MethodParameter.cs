@@ -16,12 +16,12 @@ using System.Threading.Tasks;
  * - 별도의 변수선언 없이 바로 메서드 호출시 메서드의 결과를 리턴받는 매개변수
  * - 메서드는 하나의 리턴값을 여러개 리턴할 수 있는 효과를 얻는다.
  */
-/*
+
 namespace Ch04
 {
     internal class _5_MethodParameter
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // ref 매개변수
             int num1 = 10;
@@ -53,4 +53,3 @@ namespace Ch04
         }
     }
 }
-*/

@@ -16,37 +16,32 @@ using System.Threading.Tasks;
  * - 변환할 수 없는 데이터
  */
 
-/*
 namespace Ch02
 {
     internal class _1_Variable
     {
-        // svm + tabtab = static void Main(string[] args) { }
-    static void Main(string[] args)
+    static void Main1(string[] args)
         {
-            /////////////////////////
-            // 변수
-            /////////////////////////
+            ///////////////////
+            // Variable 변수 //
+            ///////////////////
             int num1; // 데이터 선언
             num1 = 1; // 데이터 할당
 
-            int num2 = 2; // 선언과 초기화
+            int num2 = 2; // 선언과 동시에 초기화
             int num3 = num1 + num2; // 데이터 연산
 
-            // cw + tabtab = Console.WriteLine();
             Console.WriteLine("num3 = " + num3); // 데이터 출력
 
-            /////////////////////////
-            // 상수
-            /////////////////////////
-            const double PI = 3.141592;
-            const int NUM = 10;
-            // num = 20; <- 상수는 값 변경 X
-            // num = 30;
+            ///////////////////
+            // Constant 상수 //
+            ///////////////////
+            const double pi = 3.141592;
+            const int num = 10;
+            // num = 20; <- Constant = 값 변환 X
 
-            Console.WriteLine("NUM = " + NUM);
-            Console.WriteLine("PI = " + PI);
+            Console.WriteLine("num = " + num);
+            Console.WriteLine("pi = "  + pi);
         }
     }
 }
-*/

@@ -10,12 +10,11 @@ using System.Threading.Tasks;
  * 내용 : 조건문 Switch 실습 교재 p138
  */
 
-/*
 namespace Ch03
 {
     internal class _2_Switch
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Console.Write("점수 입력 : ");
             string strscore = Console.ReadLine();
@@ -45,4 +44,3 @@ namespace Ch03
         }
     }
 }
-*/

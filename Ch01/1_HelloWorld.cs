@@ -10,7 +10,6 @@ using System.Threading.Tasks;
  * 내용 : C# 개발 환경 및 HelloWorld 출력 교재 p44
  */
 
-/*
 namespace Ch01
 {
     internal class _1_HelloWorld
@@ -27,8 +26,7 @@ namespace Ch01
 
             // Format 출력
             Console.WriteLine("{0}, {1}", "Hello", "Busan");
-            Console.WriteLine("{0,-10}, {0,10}", 123456);
+            Console.WriteLine("{0, -10}, {0, 10}", 123456);
         }
     }
 }
-*/

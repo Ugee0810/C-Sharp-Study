@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Ch01/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Ch01.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Ch01.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Ch01/1.0.0": {
+      "type": "project",
+      "path": "../Ch01/Ch01.csproj",
+      "msbuildProject": "../Ch01/Ch01.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Ch01 >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\1302\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\1302\\Desktop\\Study\\Ch01\\Ch01.csproj": {
+              "projectPath": "C:\\Users\\1302\\Desktop\\Study\\Ch01\\Ch01.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

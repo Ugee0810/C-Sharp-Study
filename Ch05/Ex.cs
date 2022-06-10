@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Ch05
 {
     internal class Ex
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Animal dog = new Animal("Dog", 30, 6.5, 4);
             Animal cat = new Animal("Cat", 25, 5.5, 4);
@@ -21,4 +21,3 @@ namespace Ch05
         }
     }
 }
-*/

@@ -12,26 +12,29 @@ using System.Threading.Tasks;
  * - 같은 이름의 메서드를 매개변수(parameter)로 구분한 메서드
  * - 메서드 반환 타입은 오버로딩에 영향을 미치지 않는다.
  */
-/*
+
 namespace Ch04
 {
     internal class _3_MethodOverload
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // public static int Plus(int a, int b) 호출
             int r1 = Plus(1, 2);
+
             // public static int Plus(int a, int b, int c) 호출
             int r2 = Plus(1, 2, 3);
+
             // public static double Plus(double a, double b) 호출
             double r3 = Plus(1.1, 2.1);
+
             // public static string Plus(string a, string b) 호출
             string r4 = Plus("Hello", "World");
 
-            Console.WriteLine("r1 : "+r1);
-            Console.WriteLine("r2 : "+r2);
-            Console.WriteLine("r3 : "+r3);
-            Console.WriteLine("r4 : "+r4);
+            Console.WriteLine("r1 : " + r1);
+            Console.WriteLine("r2 : " + r2);
+            Console.WriteLine("r3 : " + r3);
+            Console.WriteLine("r4 : " + r4);
         }
 
         public static int Plus(int a, int b)
@@ -55,4 +58,3 @@ namespace Ch04
         }
     }
 }
-*/

@@ -17,4 +17,8 @@
     <Folder Include="Ch10\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Ch01\Ch01.csproj" />
+  </ItemGroup>
+
 </Project>

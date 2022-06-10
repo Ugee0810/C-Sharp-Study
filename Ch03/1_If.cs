@@ -10,12 +10,11 @@ using System.Threading.Tasks;
  * 내용 : 조건문 실습 교재 p127
  */
 
-/*
 namespace Ch03
 {
     internal class _1_If
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // if
             int num1 = 1;
@@ -72,4 +71,3 @@ namespace Ch03
         }
     }
 }
-*/

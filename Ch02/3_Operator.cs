@@ -14,12 +14,11 @@ using System.Threading.Tasks;
  * - 연산자는 크게 산술, 증가/감소, 복합대입, 비교, 논리 연산자 등이 있다.
  */
 
-/*
 namespace Ch02
 {
     internal class _3_Operator
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 산술 연산자
             int num1 = 1;
@@ -110,4 +109,3 @@ namespace Ch02
         }
     }
 }
-*/

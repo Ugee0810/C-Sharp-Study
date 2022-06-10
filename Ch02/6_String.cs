@@ -10,15 +10,14 @@ using System.Threading.Tasks;
  * 내용 : 문자열(String) 처리 실습 교재 p112
  */
 
-/*
 namespace Ch02
 {
     internal class _6_String
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             string greeting = "Good Morning";
-            Console.WriteLine("greeting : "+ greeting);
+            Console.WriteLine("greeting : " + greeting);
             Console.WriteLine();
 
             // 문자열 길이
@@ -31,11 +30,11 @@ namespace Ch02
             Console.WriteLine("greeting[5] : " + greeting[5]);
 
             // IndexOf(앞에서 참조)
-            Console.WriteLine("Index 'G' : "      +greeting.IndexOf('G'));
-            Console.WriteLine("Index \"G\" : "    +greeting.IndexOf("G"));
-            Console.WriteLine("Index \"o\" : "    +greeting.IndexOf("o"));
-            Console.WriteLine("Index \"Mor\" : "  +greeting.IndexOf("Mor"));
-            Console.WriteLine("Index \"ing\" : "  +greeting.IndexOf("ing"));
+            Console.WriteLine("Index 'G' : "      + greeting.IndexOf('G'));
+            Console.WriteLine("Index \"G\" : "    + greeting.IndexOf("G"));
+            Console.WriteLine("Index \"o\" : "    + greeting.IndexOf("o"));
+            Console.WriteLine("Index \"Mor\" : "  + greeting.IndexOf("Mor"));
+            Console.WriteLine("Index \"ing\" : "  + greeting.IndexOf("ing"));
 
             // LastindexOf(뒤에서 참조)
             Console.WriteLine("LastIndxOf 'G' : "     +greeting.LastIndexOf('G'));
@@ -46,7 +45,7 @@ namespace Ch02
             // Substring(자르기)
             Console.WriteLine("Substring(0, 4) : {0} ", greeting.Substring(0, 4)); // Substring(Start, Length) <- 자바는 End
             Console.WriteLine("Substring(5, 7) : {0} ", greeting.Substring(5, 7));
-            Console.WriteLine("Substring(5) : {0} ", greeting.Substring(5));
+            Console.WriteLine("Substring(5) : {0} "   , greeting.Substring(5));
 
             // Replace(교체)
             string replaced = greeting.Replace("Morning", "Afternoon"); // 앞의 문자열을 뒷 문자열로 교체
@@ -59,9 +58,9 @@ namespace Ch02
 
             string str1 = var1.ToString();
             string str2 = var2.ToString();
-            string str3 = ""+var3; // "" +형태 = ToString()
+            string str3 = "" + var3; // "" + 형태 = ToString()
 
-            Console.WriteLine("str1 : " +str1);
+            Console.WriteLine("str1 : " + str1);
             Console.WriteLine("str2 : " + str2);
             Console.WriteLine("str3 : " + str3);
 
@@ -78,10 +77,9 @@ namespace Ch02
             Console.WriteLine($"r2 : {r2}");
             Console.WriteLine($"r3 : {r3}");
 
-            Console.WriteLine("r1 : " +r1);
-            Console.WriteLine("r2 : " +r2);
-            Console.WriteLine("r3 : " +r3);
+            Console.WriteLine("r1 : " + r1);
+            Console.WriteLine("r2 : " + r2);
+            Console.WriteLine("r3 : " + r3);
         }
     }
 }
-*/

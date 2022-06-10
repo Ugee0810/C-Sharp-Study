@@ -13,7 +13,7 @@ using System.Threading.Tasks;
  * - 기존 클래스의 속성과 기능을 그대로 파생 클래스로 물려줘 클래스를 확장하는 문법
  * - 공통적인 내용을 부모클래스에 두고 자식 클래스에서 상속 받아 일관성있고 효율적인 프로그래밍 수행
  */
-/*
+
 namespace Ch05
 {
     class Parent
@@ -52,7 +52,7 @@ namespace Ch05
 
     internal class _4_Inheritance
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //Parent 상속 객체 생성
             Child c1 = new Child(1, 2, 3, 4);
@@ -83,4 +83,3 @@ namespace Ch05
         }
     }
 }
-*/
