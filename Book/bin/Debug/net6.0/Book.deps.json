@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Book/1.0.0": {
+        "dependencies": {
+          "Ch01": "1.0.0"
+        },
         "runtime": {
           "Book.dll": {}
+        }
+      },
+      "Ch01/1.0.0": {
+        "runtime": {
+          "Ch01.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Book/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Ch01/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -13,3 +13,9 @@ C:\Users\1302\Desktop\Study\Book\obj\Debug\net6.0\refint\Book.dll
 C:\Users\1302\Desktop\Study\Book\obj\Debug\net6.0\Book.pdb
 C:\Users\1302\Desktop\Study\Book\obj\Debug\net6.0\Book.genruntimeconfig.cache
 C:\Users\1302\Desktop\Study\Book\obj\Debug\net6.0\ref\Book.dll
+C:\Users\1302\Desktop\Study\Book\bin\Debug\net6.0\Ch01.deps.json
+C:\Users\1302\Desktop\Study\Book\bin\Debug\net6.0\Ch01.runtimeconfig.json
+C:\Users\1302\Desktop\Study\Book\bin\Debug\net6.0\Ch01.exe
+C:\Users\1302\Desktop\Study\Book\bin\Debug\net6.0\Ch01.dll
+C:\Users\1302\Desktop\Study\Book\bin\Debug\net6.0\Ch01.pdb
+C:\Users\1302\Desktop\Study\Book\obj\Debug\net6.0\Book.csproj.CopyComplete
