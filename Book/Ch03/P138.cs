@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch03
 {
     internal class P138
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //switch 조건문 활용
             Console.WriteLine("숫자를 입력하세요. : ");
@@ -26,4 +26,3 @@ namespace Book.Ch03
         }
     }
 }
-*/

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch05
 {
     internal class P215
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //Math 클래스
             Console.WriteLine(Math.Abs    (-52273));  //절대 값을 구합니다.
@@ -20,4 +20,3 @@ namespace Book.Ch05
         }
     }
 }
-*/

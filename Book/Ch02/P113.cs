@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P113
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 기본 자료형을 문자열로 변환
             Console.WriteLine((52).ToString());
@@ -25,4 +25,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

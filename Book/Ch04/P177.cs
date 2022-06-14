@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch04
 {
     internal class P177
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //break 키워드
             while(true)
@@ -20,4 +20,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

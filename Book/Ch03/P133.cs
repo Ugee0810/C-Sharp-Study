@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch03
 {
     internal class P133
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //중첩 조건문 활용
             if (DateTime.Now.Hour < 11)
@@ -29,4 +29,3 @@ namespace Book.Ch03
         }
     }
 }
-*/

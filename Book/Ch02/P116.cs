@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P116
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 문자열을 Bool로 변환
             Console.WriteLine(bool.Parse("True"));
@@ -18,4 +18,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

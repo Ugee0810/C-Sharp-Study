@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch04
 {
     internal class P175
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //별 피라미드(1)
             for (int i = 0; i <= 10; i++)
@@ -22,4 +22,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

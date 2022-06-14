@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P098
     {
         // GetType() 메서드 활용
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 변수를 선언
             int _int = 273;
@@ -29,4 +29,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

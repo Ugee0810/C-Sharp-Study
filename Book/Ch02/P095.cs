@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P095
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 후위 증감 연산자
             int a = 10;
@@ -19,4 +19,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

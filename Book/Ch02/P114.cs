@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P114
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 소수점 제거
             double num = 52.273103;
@@ -25,4 +25,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

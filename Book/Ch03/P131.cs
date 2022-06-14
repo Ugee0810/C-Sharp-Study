@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch03
 {
     internal class P131
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //홀수 짝수 구분
             Console.Write("숫자 입력 : ");
@@ -35,4 +35,3 @@ namespace Book.Ch03
         }
     }
 }
-*/

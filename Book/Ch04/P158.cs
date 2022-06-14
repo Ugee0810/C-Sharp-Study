@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch04
 {
     internal class P158
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //기본적인 배열 생성 방법
             int[] intArray = { 52, 273, 32, 65, 103 };
@@ -20,4 +20,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

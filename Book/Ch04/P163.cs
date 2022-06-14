@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch04
 {
     internal class P163
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //while 반복문 이용
             int i = 0;
@@ -22,4 +22,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

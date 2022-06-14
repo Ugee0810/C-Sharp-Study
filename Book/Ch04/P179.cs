@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch04
 {
     internal class P179
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //continue 키워드
             for (int i = 1; i < 10; i++)
@@ -22,4 +22,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

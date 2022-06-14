@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch03
 {
     internal class P142
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //삼항연산자
             //참과 거짓 위치에 불 자료형 사용
@@ -18,4 +18,3 @@ namespace Book.Ch03
         }
     }
 }
-*/

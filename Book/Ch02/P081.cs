@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P081
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 오버플로우
             int a = 2147483640;
@@ -18,4 +18,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading; //필수 입력
-/*
+
 namespace Book.Ch04
 {
     internal class P186
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //Console.SetCursorPosition() 메서드
             Console.Write("메서드 호출 전");
@@ -25,4 +25,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

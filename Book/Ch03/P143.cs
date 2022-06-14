@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch03
 {
     internal class P143
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //삼항 연산자를 이용한 자연수 판별
             //변수 선언
@@ -19,4 +19,3 @@ namespace Book.Ch03
         }
     }
 }
-*/

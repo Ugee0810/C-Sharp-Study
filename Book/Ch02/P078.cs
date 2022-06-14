@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P078
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 불과 논리 연산자
             Console.WriteLine(DateTime.Now.Hour < 3 || 8 < DateTime.Now.Hour);
@@ -16,4 +16,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch04
 {
     internal class P167
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //for 반복문으로 덧셈
             int output = 0;
@@ -20,4 +20,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch04
 {
     internal class P168
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //for 반복문으로 곱셈
             int n1 = 1;
@@ -26,4 +26,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

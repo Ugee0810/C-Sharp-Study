@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch05
 {
     internal class P211
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //배열 생성
             int[] intary = new int[10];
@@ -21,4 +21,3 @@ namespace Book.Ch05
         }
     }
 }
-*/

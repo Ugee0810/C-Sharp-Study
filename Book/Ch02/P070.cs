@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P070
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 문자열
             Console.WriteLine("안녕하세요.");
@@ -20,4 +20,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

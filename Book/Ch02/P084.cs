@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P084
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 실수 변수 생성
             double a = 52.273;
@@ -21,4 +21,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

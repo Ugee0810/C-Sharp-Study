@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch03
 {
     internal class P147
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //키 입력 구분
             ConsoleKeyInfo info = Console.ReadKey();
@@ -33,4 +33,3 @@ namespace Book.Ch03
         }
     }
 }
-*/

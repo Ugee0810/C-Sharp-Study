@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch04
 {
     internal class P180
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             for(int i=1;i<10;i++)
             {
@@ -17,4 +17,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

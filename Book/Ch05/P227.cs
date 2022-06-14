@@ -3,22 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch05
 {
     internal class P227
     {
         class Product
         {
-            public string name;
-            public int price;
-
             //인스턴스 변수를 생성할 때 초기화    
             public string name = "default";
             public int price = 1000;
         }
 
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //인스턴스 변수 사용
             //인스턴스 변수 생성
@@ -33,4 +30,3 @@ namespace Book.Ch05
         }
     }
 }
-*/

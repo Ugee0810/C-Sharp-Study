@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch05
 {
     internal class P214
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //리스트 요소 제거
             //변수 선언
@@ -25,4 +25,3 @@ namespace Book.Ch05
         }
     }
 }
-*/

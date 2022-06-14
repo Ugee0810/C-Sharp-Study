@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch04
 {
     internal class P159
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //배열 생성하고 요소에 접근
             //배열 생성
@@ -26,4 +26,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch03
 {
     internal class P135
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //if else if 조건문
             if(DateTime.Now.Hour < 11)
@@ -37,4 +37,3 @@ namespace Book.Ch03
         }
     }
 }
-*/

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
-/*
+
 namespace Book.Ch04
 {
     internal class P188
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             while(true)
             {
@@ -35,4 +35,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

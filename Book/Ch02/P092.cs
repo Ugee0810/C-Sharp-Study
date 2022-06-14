@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P092
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             // 문자열과 관련된 복합 대입 연산자
             string a = "Hello ";
@@ -26,4 +26,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch01
 {
     internal class P051
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Console.Write("Write");
             Console.WriteLine("WriteLine");
@@ -21,4 +21,3 @@ namespace Book.Ch01
         }
     }
 }
-*/

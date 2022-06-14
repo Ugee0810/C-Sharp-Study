@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch05
 {
     internal class P226
@@ -15,10 +15,9 @@ namespace Book.Ch05
             public int Price;
         }
 
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Product product = new Product();
         }
     }
 }
-*/

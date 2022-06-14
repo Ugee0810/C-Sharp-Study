@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch04
 {
     internal class P169
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //시간을 사용한 반복문 이탈
             long start = DateTime.Now.Ticks;
@@ -22,4 +22,3 @@ namespace Book.Ch04
         }
     }
 }
-*/

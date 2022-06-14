@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch02
 {
     internal class P066
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //정수와 연산자
             Console.WriteLine(1 + 2);
@@ -25,4 +25,3 @@ namespace Book.Ch02
         }
     }
 }
-*/

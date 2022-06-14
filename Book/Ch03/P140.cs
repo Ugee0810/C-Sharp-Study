@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
+
 namespace Book.Ch03
 {
     internal class P140
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //break 키워드를 사용하지 않는 조건문
             Console.Write("지금은 몇 월인가요. : ");
@@ -43,4 +43,3 @@ namespace Book.Ch03
         }
     }
 }
-*/
