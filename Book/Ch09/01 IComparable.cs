@@ -151,7 +151,7 @@ namespace Book.Ch09
             }
         }
 
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             List<Product> list = new List<Product>()
             {
