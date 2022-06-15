@@ -48,7 +48,8 @@ namespace Ch06
         }
     }
 
-    internal class _5_Indexer
+
+    class _5_Indexer
     {
         static void Main1(string[] args)
         {

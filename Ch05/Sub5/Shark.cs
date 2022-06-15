@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ch05.Sub5
 {
-    internal class Shark : Animal
+    class Shark : Animal
     {
         public override void Move()
         {
