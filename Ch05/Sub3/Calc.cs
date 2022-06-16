@@ -13,21 +13,21 @@ namespace Ch05.Sub3
         public static Calc Instance { get { return instance; } }
         private Calc() { }
 
-            public int Plus(int x, int y) 
-            {
-                return x + y;
-            }
-            public int Minus(int x, int y) 
-            {
-                return x - y;
-            }
-            public int Multi(int x, int y)
-            {
-                return x * y;
-            }
-            public int Div(int x, int y) 
-            {
-                return x / y;
-            }
+        public int Plus(int x, int y) 
+        {
+            return x + y;
+        }
+        public int Minus(int x, int y) 
+        {
+            return x - y;
+        }
+        public int Multi(int x, int y)
+        {
+            return x * y;
+        }
+        public int Div(int x, int y) 
+        {
+            return x / y;
+        }
     }
 }
