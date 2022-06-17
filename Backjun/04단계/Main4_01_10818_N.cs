@@ -21,8 +21,6 @@ namespace Backjun._04단계
     {
         static void Main1(string[] args)
         {
-
-
         }
     }
 }
