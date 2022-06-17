@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// https://programmers.co.kr/learn/courses/30/lessons/42748
 namespace Programmers.Lv1
 {
     internal class _42748
