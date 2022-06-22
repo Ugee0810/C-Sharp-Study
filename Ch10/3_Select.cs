@@ -9,7 +9,7 @@ namespace Ch10
 {
     internal class _3_Select
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             //데이터베이스 접속 정보
             string server = "127.0.0.1";
