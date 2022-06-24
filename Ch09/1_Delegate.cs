@@ -12,7 +12,6 @@ using System.Threading.Tasks;
  * 대리자(Delegate)
  * - 메서드에 대한 참조를 나타내는 형식으로 메서드를 대신 호출 해주는 역할
  * - 대리자를 익명 메서드로 많이 활용한다.
- * 
  */
 
 namespace Ch09

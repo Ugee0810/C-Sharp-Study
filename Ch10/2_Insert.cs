@@ -5,6 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+ * 날짜 : 2022/06/21
+ * 이름 : 송환욱
+ * 내용 : 데이터베이스 프로그래밍 실습
+ */
+
 namespace Ch10
 {
     internal class _2_Insert

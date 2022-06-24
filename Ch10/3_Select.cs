@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+/*
+ * 날짜 : 2022/06/21
+ * 이름 : 송환욱
+ * 내용 : 데이터베이스 프로그래밍 실습
+ */
+
 // 접속 정보 -> 커넥션 생성 -> 접속 후 실행 -> 종료
 namespace Ch10
 {
