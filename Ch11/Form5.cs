@@ -80,7 +80,7 @@ namespace Ch11
         }
 
         //인터벌만큼 실행되는 메서드(1s)
-        private void myTimer_Tick(object sender, EventArgs e)
+        private void myTimer_Tick_1(object sender, EventArgs e)
         {
             Console.WriteLine("아하");
             myRect.Y += 10;
