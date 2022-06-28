@@ -11,7 +11,7 @@ namespace Project2
         private string name;
         private string uid;
         private string hp;
-        private int age;
+        private int    age;
 
         public string Name { get => name; set => name = value; }
         public string Uid { get => uid; set => uid = value; }

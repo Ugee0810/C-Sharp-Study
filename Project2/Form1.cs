@@ -11,118 +11,67 @@ namespace Project2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //DB 접속 정보
-            string server = "127.0.0.1";
-            string port = "3306";
-            string username = "TESTER";
-            string password = "1Q2W3E";
-            string database = "testdb";
+            List<User> users = DBAccess.Instance.SelectUsers();
 
-            //DB 커넥션
-            string strconn = $"server={server};port={port};username={username};password={password};database={database};";
-            MySqlConnection conn = new MySqlConnection(strconn);
-
-            //데이터 공급 리스트 생성
-            List<User> users = new List<User>(); //User클래스 -> users를 DGV에 입력
-
-            try
-            {
-                //DB 접속
-                conn.Open();
-
-                //Sql 실행
-                MySqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = "SELECT * FROM `user1`";
-
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                //결과 출력
-                while (reader.Read()) //열 개 수만큼 반복
-                {
-                    User user = new User();
-                    user.Uid = reader[0].ToString(); //reader배열은 데이터베이스의 행
-                    user.Name = reader[1].ToString();
-                    user.Hp = reader[2].ToString();
-                    user.Age = Convert.ToInt32(reader[3]);
-
-                    users.Add(user);
-                }
-            }
-            catch (Exception except)
-            {
-                Console.WriteLine(except.Message);
-            }
-            finally
-            {
-                //접속 종료
-                conn.Close();
-            }
-
-            //데이터 그리드 뷰 데이터 공급
+            // 데이터그리드뷰 데이터 공급
             dataGridView1.DataSource = users;
+        }
+
+        //셀 클릭하면 Text박스에 도출
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int selectedRow = e.RowIndex;
+            DataGridViewRow row = dataGridView1.Rows[selectedRow];
+
+            string name = row.Cells[0].Value.ToString();
+            string uid  = row.Cells[1].Value.ToString();
+            string hp   = row.Cells[2].Value.ToString();
+            int    age  = (int)row.Cells[3].Value;
+
+            txtUid.Text  = uid;
+            txtName.Text = name;
+            txtHp.Text   = hp;
+            nAge.Value   = age;
         }
 
         //조회
         private void btnSelect_Click(object sender, EventArgs e)
         {
-            
+            List<User> users = DBAccess.Instance.SelectUsers();
+
+            // 데이터그리드뷰 데이터 공급
+            dataGridView1.DataSource = users;
         }
 
         //추가
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            string uid = txtUid.Text.ToString();
-            string name = txtName.Text.ToString();
-            string hp = txtHp.Text.ToString();
-            string age = nAge.Text.ToString();
+            string  uid  = txtUid.Text.ToString();
+            string  name = txtName.Text.ToString();
+            string  hp   = txtHp.Text.ToString();
+            decimal age  = nAge.Value;
 
-            //DB 접속 정보
-            string server = "127.0.0.1";
-            string port = "3306";
-            string username = "TESTER";
-            string password = "1Q2W3E";
-            string database = "testdb";
-
-            //DB 커넥션
-            string strconn = $"server={server};port={port};username={username};password={password};database={database};";
-            MySqlConnection conn = new MySqlConnection(strconn);
-
-            try
-            {
-                //DB 접속
-                conn.Open();
-
-                //Sql 실행
-                MySqlCommand cmd = conn.CreateCommand();
-                cmd.CommandText = $"INSERT INTO `user1` VALUES ('{uid}', '{name}', '{hp}', {age})";
-                cmd.ExecuteNonQuery();
-
-            }
-            catch (Exception except)
-            {
-                Console.WriteLine(except.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            MessageBox.Show("데이터가 저장되었습니다.", "Insert 완료");
+            DBAccess.Instance.InsertUser(uid, name, hp, age);
+            Reset();
         }
-
 
         //수정
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            string  uid  = txtUid.Text.ToString();
+            string  name = txtName.Text.ToString();
+            string  hp   = txtHp.Text.ToString();
+            decimal age  = nAge.Value;
 
+            DBAccess.Instance.UpdateUser(uid, name, hp, age);
         }
-
 
         //삭제
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            string uid = txtUid.Text.ToString();
+            DBAccess.Instance.DeleteUser(uid);
         }
-
 
         //리셋
         private void btnReset_Click(object sender, EventArgs e)
@@ -132,10 +81,10 @@ namespace Project2
 
         public void Reset()
         {
-            txtUid.Text = "";
+            txtUid.Text  = "";
             txtName.Text = "";
-            txtHp.Text = "";
-            nAge.Text = "0";
+            txtHp.Text   = "";
+            nAge.Text    = "0";
         }
     }
 }

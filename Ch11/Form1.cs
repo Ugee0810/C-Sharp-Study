@@ -102,5 +102,11 @@ namespace Ch11
             Form2 form2 = new Form2();
             form2.ShowDialog();
         }
+
+        private void btnForm5_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
+        }
     }
 }

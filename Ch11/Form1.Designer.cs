@@ -69,6 +69,7 @@
             this.gbGender = new System.Windows.Forms.GroupBox();
             this.gbYear = new System.Windows.Forms.GroupBox();
             this.btnForm2 = new System.Windows.Forms.Button();
+            this.btnForm5 = new System.Windows.Forms.Button();
             this.gbGender.SuspendLayout();
             this.gbYear.SuspendLayout();
             this.SuspendLayout();
@@ -489,11 +490,23 @@
             this.btnForm2.UseVisualStyleBackColor = true;
             this.btnForm2.Click += new System.EventHandler(this.btnForm2_Click);
             // 
+            // btnForm5
+            // 
+            this.btnForm5.Font = new System.Drawing.Font("맑은 고딕", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnForm5.Location = new System.Drawing.Point(12, 543);
+            this.btnForm5.Name = "btnForm5";
+            this.btnForm5.Size = new System.Drawing.Size(253, 40);
+            this.btnForm5.TabIndex = 42;
+            this.btnForm5.Text = "Form5 띄우기";
+            this.btnForm5.UseVisualStyleBackColor = true;
+            this.btnForm5.Click += new System.EventHandler(this.btnForm5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 542);
+            this.ClientSize = new System.Drawing.Size(403, 595);
+            this.Controls.Add(this.btnForm5);
             this.Controls.Add(this.btnForm2);
             this.Controls.Add(this.gbYear);
             this.Controls.Add(this.gbGender);
@@ -590,5 +603,6 @@
         private Button btnYear;
         private Label lbResultYear;
         private Button btnForm2;
+        private Button btnForm5;
     }
 }
