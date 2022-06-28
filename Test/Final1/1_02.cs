@@ -26,4 +26,5 @@ namespace Test.Final1
             Console.WriteLine(var6);
             Console.WriteLine(var7);
         }
+    }
 }

@@ -197,7 +197,7 @@ namespace Test._06
 
     internal class _6_010
     {
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             Console.WriteLine("********************************");
             Console.WriteLine("데이터 매니저 프로그램 v2.0");
