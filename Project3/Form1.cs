@@ -51,9 +51,10 @@ namespace Project3
                 return; // 반환이 없는 메서드를 강제 종료 시킴
             }
 
+            //바둑돌 그리기
             if (isBlack)
             {
-                g.FillEllipse(bBrush, dol);  //바둑돌 그리기
+                g.FillEllipse(bBrush, dol);  
                 dataSet[x, y] = STONE.black; //검은색 돌 2차원 배열 좌표 데이터를 해당 배열의 인덱스에 추가
 
                 isBlack = false;
@@ -73,35 +74,7 @@ namespace Project3
         //8방향 체크
         public void CheakOmok(int x, int y)
         {
-            int cBlack = 1;
-            int cWhite = 1;
-
-            /*
-            // ↑
-            for (int i = y - 1; i >= 0; i--)
-            {
-                if (dataSet[i, y] == dataSet[x, y])
-                    count++;
-                else
-                    break;
-            }
-
-            // ↓
-            for (int i = y + 1; i <= 18; i++)
-            {
-                if (dataSet[i, y] == dataSet[x, y])
-                    count++;
-                else
-                    break;
-            }
-
-            //카운트 5 달성 시 오목
-            if (count >= 5)
-            {
-                MessageBox.Show("오목입니다.");
-                return;
-            }
-            count = 1;
+            int count = 1;
 
             // →
             for (int i = x + 1; i <= 18; i++)
@@ -120,19 +93,33 @@ namespace Project3
                 else
                     break;
             }
-
-            //카운트 5 달성 시 오목
-            if (count >= 5)
-            {
-                MessageBox.Show("오목입니다.");
-                return;
-            }
+            CheckCountAlert(count);
             count = 1;
 
-            // ↗
-            for (int i = x + 1, j = y - 1; i <= 18 && j >= 0; i++, j--)
+            // ↑
+            for (int i = y - 1; i >= 0; i--)
             {
                 if (dataSet[i, y] == dataSet[x, y])
+                    count++;
+                else
+                    break;
+            }
+
+            // ↓
+            for (int i = y + 1; i >= 0; i++)
+            {
+                if (dataSet[i, y] == dataSet[x, y])
+                    count++;
+                else
+                    break;
+            }
+            CheckCountAlert(count);
+            count = 1;
+
+            // ↖
+            for (int i = x - 1, j = y - 1; i >= 0 && j >= 0; i--, j--)
+            {
+                if (dataSet[i, j] == dataSet[x, y])
                     count++;
                 else
                     break;
@@ -141,56 +128,62 @@ namespace Project3
             // ↘
             for (int i = x + 1, j = y + 1; i <= 18 && j <= 18; i++, j++)
             {
-                if (dataSet[i, y] == dataSet[x, y])
+                if (dataSet[i, j] == dataSet[x, y])
                     count++;
                 else
                     break;
             }
-
-            //카운트 5 달성 시 오목
-            if (count >= 5)
-            {
-                MessageBox.Show("오목입니다.");
-                return;
-            }
+            CheckCountAlert(count);
             count = 1;
+
+            // ↗
+            for (int i = x + 1, j = y - 1; i <= 18 && j >= 0; i++, j--)
+            {
+                if (dataSet[i, j] == dataSet[x, y])
+                    count++;
+                else
+                    break;
+            }
 
             // ↙
             for (int i = x - 1, j = y + 1; i >= 0 && j <= 18; i--, j++)
             {
-                if (dataSet[i, y] == dataSet[x, y])
+                if (dataSet[i, j] == dataSet[x, y])
                     count++;
                 else
                     break;
             }
+            CheckCountAlert(count);
+        }
 
-            // ↖
-            for (int i = x - 1, j = y - 1; i >= 0 && j >= 0; i--, j--)
-            {
-                if (dataSet[i, y] == dataSet[x, y])
-                    count++;
-                else
-                    break;
-            }
-
+        public void CheckCountAlert(int count)
+        {
             //카운트 5 달성 시 오목
             if (count >= 5)
             {
-                MessageBox.Show("오목입니다.");
-                return;
+                DialogResult result = MessageBox.Show("오목입니다. 새로운 게임을 시작할까요?",
+                                                      "확인",
+                                                      MessageBoxButtons.YesNo);
+
+                if (result == DialogResult.Yes)
+                {
+                    NewGame();
+                    return;
+                }
+                else this.Close();
             }
-            count = 1;
-            */
         }
 
         public void NewGame()
         {
             //화면 갱신 -> OnPaint()호출
-            this.Invalidate(); 
+            this.Invalidate();
+
             //데이터셋 초기화
             for (int x = 0; x < 19; x++)
                 for (int y = 0; y < 19; y++)
                     dataSet[x, y] = STONE.none;
+
             //상태변수 초기화
             isBlack = true;
         }
@@ -198,15 +191,8 @@ namespace Project3
         protected override void OnPaint(PaintEventArgs e)
         {
             //바둑판 눈금 그리기
-            for (int i = 0; i < 19; i++)
-            {
-                g.DrawLine(pen, new Point(margin + sizeNun * i, margin), new Point(margin + sizeNun * i, margin + 18 * sizeNun));
-            }
-
-            for (int k = 0; k < 19; k++)
-            {
-                g.DrawLine(pen, new Point(margin, margin + sizeNun * k), new Point(margin + 18 * sizeNun, margin + sizeNun * k));
-            }
+            for (int i = 0; i < 19; i++) g.DrawLine(pen, new Point(margin + sizeNun * i, margin), new Point(margin + sizeNun * i, margin + 18 * sizeNun));
+            for (int k = 0; k < 19; k++) g.DrawLine(pen, new Point(margin, margin + sizeNun * k), new Point(margin + 18 * sizeNun, margin + sizeNun * k));
         }
     }
 }
