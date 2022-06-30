@@ -34,6 +34,7 @@
             // 
             // myTimer
             // 
+            this.myTimer.Enabled = true;
             this.myTimer.Tick += new System.EventHandler(this.myTimer_Tick);
             // 
             // Form1
@@ -43,6 +44,7 @@
             this.ClientSize = new System.Drawing.Size(539, 450);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
 
         }
