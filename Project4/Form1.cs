@@ -18,7 +18,7 @@ namespace Project4
         int formH = 500;
 
         // 블럭 갯수
-        int    nBlocks      = 10;
+        int    nBlocks      = 1;
         bool[] blockVisible = new bool[100]; // 벽돌과 공의 충돌 여부를 나타내는 상태변수
 
         // 블럭
@@ -36,7 +36,7 @@ namespace Project4
 
         // 라켓
         int racketY = 480;
-        int racketW = 320;
+        int racketW = 150;
         int racketH = 10;
 
         public Form1()
@@ -117,7 +117,7 @@ namespace Project4
             double dx = 0;
             double unit = ballW;
 
-            dx = unit / slope;
+            dx = unit / 5 / slope;
 
             ball.X += (int)dx;
             ball.Y += (int)(vDir * slope * dx);
@@ -131,7 +131,7 @@ namespace Project4
                 vDir = -vDir;
 
             // 공과 벽돌이 충돌시 체크
-            for (int i = 0; i < nBlocks; i++)
+            for (int i = 0; i <= nBlocks; i++)
             {
                 if (blockVisible[i] == true && blocks[i].IntersectsWith(ball))
                 {
@@ -201,10 +201,7 @@ namespace Project4
 // 추가 고려할 점
 // ＃[★]모듈화
 // ＃[★]일시정지, 재개 버튼 추가 (대신 정지 상태에서 바가 움직임)
-// ＃[未]클리어 후 레벨 추가
-// ＃[未]아이디 입력 후 스코어 기록 기능(실시 시간, 이름, 스코어, 레벨)
+// ＃[未]클리어 후 레벨 추가(클리어 할 때 마다 라켓이 작아짐, 움직이는 장애물 추가)
+// ＃[未]게임 시작 -> Die -> 기록 저장란 출력(시간(자동), 스코어(자동), 레벨(자동), 이름)
 // ＃[未]실시 시간(1s = -10점) / 라운드 보너스(+1,000, +3,000, +5,000) / 블록 한 개 제거(+100) / 블록 연속 파괴 점수(100 + 20 *= 2)
-
-// ＃[未]모든 벽돌 제거 시 안내, 효과
-// 1.벽돌의 true상태가 0이라면 타이머 종료
-// 2.메시지 박스 출력
+// ＃[未]데이터베이스 연동
