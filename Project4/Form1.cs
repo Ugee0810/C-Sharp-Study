@@ -5,11 +5,13 @@ namespace Project4
         // 그래픽
         Graphics g;
         Brush blockColor  = new SolidBrush(Color.Orange);
+        Brush levelColor  = new SolidBrush(Color.Black); // 레벨업마다 추가되는 장애물
         Brush ballColor   = new SolidBrush(Color.Gold);
         Brush racketColor = new SolidBrush(Color.Red);
         Pen   pen         = new Pen(Color.Black);
 
-        Rectangle[]  blocks = new Rectangle[100];
+        Rectangle[]  blocks      = new Rectangle[100];
+        Rectangle[]  levelBlocks = new Rectangle[10];
         Rectangle    ball;
         Rectangle    racket = new Rectangle();
 
@@ -17,15 +19,21 @@ namespace Project4
         int formW = 300;
         int formH = 500;
 
-        // 블럭 갯수
+        // 블록 갯수
         int    nBlocks      = 1;
+        int    nLevel       = 1;             // 장애물 블록 갯수
         bool[] blockVisible = new bool[100]; // 벽돌과 공의 충돌 여부를 나타내는 상태변수
+        bool[] levelVisible = new bool[100];
 
-        // 블럭
+        // 블록
         int blockY = 50;
         int blockW = 30;
         int blockH = 20;
         int clearedBlocks = 0;
+
+        // 장애물 블록
+        int levelBlockW = 10;
+        int levelBlockH = 10;
 
         // 공
         int    ballW = 15;
@@ -36,15 +44,18 @@ namespace Project4
 
         // 라켓
         int racketY = 480;
-        int racketW = 150;
+        int racketW = 250;
         int racketH = 10;
+
+        int level = 1;
 
         public Form1()
         {
             InitializeComponent();
             FormSize();           // 폼 사이즈
             g = CreateGraphics(); // 그래픽 객체 생성
-            InitBlocks();         // 초기화-블럭 
+            InitBlocks();         // 초기화-블럭
+            InitLevelBlocks();     // 초기화-장애물 블록
             InitBall();           // 초기화-공 관련
             InitRacket();         // 초기화-라켓
         }
@@ -67,6 +78,18 @@ namespace Project4
                                           blockH - 1);
                 blockVisible[i] = true; // 블록 Visible 값 초기화
                 clearedBlocks = 0;
+            }
+        }
+
+        // 장애물 블록 초기화 메서드
+        public void InitLevelBlocks()
+        {
+            for (int i = 0; i < level; i++)
+            {
+                blocks[i] = new Rectangle(150,
+                                          150,
+                                          levelBlockW,
+                                          levelBlockH);
             }
         }
 
@@ -104,6 +127,12 @@ namespace Project4
                     g.FillRectangle(blockColor, blocks[i]);
             }
 
+            // 매개변수 level값 만큼 장애물 벽돌 생성
+            for (int i = 0; i <= level; i++)
+            {
+                g.FillRectangle(levelColor, levelBlocks[i]);
+            }
+
             // 라켓 그리기
             g.FillRectangle(racketColor, racket);
 
@@ -117,7 +146,7 @@ namespace Project4
             double dx = 0;
             double unit = ballW;
 
-            dx = unit / 5 / slope;
+            dx = unit / 2 / slope;
 
             ball.X += (int)dx;
             ball.Y += (int)(vDir * slope * dx);
@@ -129,6 +158,18 @@ namespace Project4
             // 공이 천장이나 라켓에 충돌(세로 방향 굴절)
             if (ball.Y < 0 || racket.IntersectsWith(ball)) // Rectangle.IntersectsWith() :: 같은 Rectangle 객체가 충돌할 때 이벤트
                 vDir = -vDir;
+
+            // 공은 자꾸 움직임
+
+
+            // 공이 장애물 벽돌과 충돌(반대 방향 굴절)
+            for (int i = 0; i <= nLevel; i++)
+            {
+                if (levelVisible[i] == true && levelBlocks[i].IntersectsWith(ball))
+                {
+                    vDir = -vDir;
+                }
+            }
 
             // 공과 벽돌이 충돌시 체크
             for (int i = 0; i <= nBlocks; i++)
@@ -149,6 +190,10 @@ namespace Project4
                             InitBlocks();
                             InitRacket();
                             InitBall();
+                            level++;
+                            Console.WriteLine($"Now level : {level}");
+                            racketW -= 20;
+                            Console.WriteLine($"라켓의 너비가 {racketW}이 됐습니다.");
                             myTimer.Start();
                         }
                         else Close();
