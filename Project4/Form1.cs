@@ -18,17 +18,18 @@ namespace Project4
         int formH = 500;
 
         // 블럭 갯수
-        int    nBlocks      = 20;
+        int    nBlocks      = 10;
         bool[] blockVisible = new bool[100]; // 벽돌과 공의 충돌 여부를 나타내는 상태변수
 
         // 블럭
-        int blockY = 40;
+        int blockY = 50;
         int blockW = 30;
         int blockH = 20;
+        int clearedBlocks = 0;
 
         // 공
-        int    ballW = 10;
-        int    ballH = 10;
+        int    ballW = 15;
+        int    ballH = 15;
         double slope = 1; // 기울기
         double vDir  = 1; // 공 수직방향 여부
         Random rand  = new Random(); // 시작할 때 떨어질 방향을 랜덤으로 주기 위한 난수
@@ -65,6 +66,7 @@ namespace Project4
                                           blockW - 1,
                                           blockH - 1);
                 blockVisible[i] = true; // 블록 Visible 값 초기화
+                clearedBlocks = 0;
             }
         }
 
@@ -120,12 +122,12 @@ namespace Project4
             ball.X += (int)dx;
             ball.Y += (int)(vDir * slope * dx);
 
-            // 공과 좌우 벽이 충돌 : 가로 방향 굴절
+            // 공과 좌우 벽이 충돌(가로 방향 굴절)
             if (ball.X < 0 || ball.X > formW - ballW) // x : 1 ~ 489 범위 제한
                 slope = -slope;
 
-            // 공이 천장이나 라켓에 충돌 : 세로 방향 굴절
-            if (ball.Y < 0 || racket.IntersectsWith(ball)) // Rectangle.IntersectsWith() - 같은 Rectangle 객체가 충돌할 때 이벤트
+            // 공이 천장이나 라켓에 충돌(세로 방향 굴절)
+            if (ball.Y < 0 || racket.IntersectsWith(ball)) // Rectangle.IntersectsWith() :: 같은 Rectangle 객체가 충돌할 때 이벤트
                 vDir = -vDir;
 
             // 공과 벽돌이 충돌시 체크
@@ -135,6 +137,23 @@ namespace Project4
                 {
                     vDir = -vDir;            // 충돌 방향과 반대 방향 굴절
                     blockVisible[i] = false; // 벽돌은 안 보이게 비활성화
+
+                    if (++clearedBlocks >= nBlocks)
+                    {
+                        myTimer.Stop(); // 화면 로딩 멈춤 :: ticker 멈춤
+                        DialogResult result = MessageBox.Show("클리어 하셨습니다. 다음 레벨을 진행하시겠습니까?",
+                                                              "확인",
+                                                              MessageBoxButtons.YesNo);
+                        if (result == DialogResult.Yes)
+                        {
+                            InitBlocks();
+                            InitRacket();
+                            InitBall();
+                            myTimer.Start();
+                        }
+                        else Close();
+                    }
+                    //Console.WriteLine(clearedBlocks);
                 }
             }
 
@@ -158,6 +177,7 @@ namespace Project4
             Invalidate();
         }
 
+        // 키보드 조작
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left)
@@ -177,9 +197,14 @@ namespace Project4
 // 앞으로의 필수 구현 목록
 // ＃[★]라켓 화면 밖으로 사리지지 않게 하기 
 // ＃[★]깨진 벽돌은 충돌 무효화
-// ＃[未]모든 벽돌 제거 시 안내, 효과
+// ＃[★]모든 벽돌 제거 시 안내, 효과
 // 추가 고려할 점
 // ＃[★]모듈화
 // ＃[★]일시정지, 재개 버튼 추가 (대신 정지 상태에서 바가 움직임)
 // ＃[未]클리어 후 레벨 추가
 // ＃[未]아이디 입력 후 스코어 기록 기능(실시 시간, 이름, 스코어, 레벨)
+// ＃[未]실시 시간(1s = -10점) / 라운드 보너스(+1,000, +3,000, +5,000) / 블록 한 개 제거(+100) / 블록 연속 파괴 점수(100 + 20 *= 2)
+
+// ＃[未]모든 벽돌 제거 시 안내, 효과
+// 1.벽돌의 true상태가 0이라면 타이머 종료
+// 2.메시지 박스 출력

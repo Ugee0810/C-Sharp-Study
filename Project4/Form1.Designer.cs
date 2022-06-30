@@ -35,7 +35,7 @@
             // myTimer
             // 
             this.myTimer.Enabled = true;
-            this.myTimer.Interval = 10;
+            this.myTimer.Interval = 1;
             this.myTimer.Tick += new System.EventHandler(this.myTimer_Tick);
             // 
             // Form1
