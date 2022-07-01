@@ -4,50 +4,48 @@ namespace Project4
     {
         // 그래픽
         Graphics g;
-        Brush blockColor  = new SolidBrush(Color.Orange);
-        Brush levelColor  = new SolidBrush(Color.Black); // 레벨업마다 추가되는 장애물
-        Brush ballColor   = new SolidBrush(Color.Gold);
-        Brush racketColor = new SolidBrush(Color.Red);
-        Pen   pen         = new Pen(Color.Black);
+        Brush blockColor         = new SolidBrush(Color.Orange);
+        Brush obstacleBlockColor = new SolidBrush(Color.Gray);
+        Brush ballColor          = new SolidBrush(Color.Gold);
+        Brush racketColor        = new SolidBrush(Color.Red);
+        Pen   pen                = new Pen(Color.Black);
 
-        Rectangle[]  blocks      = new Rectangle[100];
-        Rectangle[]  levelBlocks = new Rectangle[10];
-        Rectangle    ball;
-        Rectangle    racket = new Rectangle();
+        Rectangle[]  rBlocks         = new Rectangle[100];
+        Rectangle[]  rObstacleBlocks = new Rectangle[10];
+        Rectangle    rBall;
+        Rectangle    rRacket         = new Rectangle();
 
         // 폼 사이즈
         int formW = 300;
         int formH = 500;
 
-        // 블록 갯수
-        int    nBlocks      = 1;
-        int    nLevel       = 1;             // 장애물 블록 갯수
-        bool[] blockVisible = new bool[100]; // 벽돌과 공의 충돌 여부를 나타내는 상태변수
-        bool[] levelVisible = new bool[100];
-
         // 블록
-        int blockY = 50;
-        int blockW = 30;
-        int blockH = 20;
-        int clearedBlocks = 0;
+        int blockY  = 50;
+        int blockW  = 30;
+        int blockH  = 20;
+        int nBlocks = 1;
+        int clearedBlocks = 0; // 파괴된 블록 카운트
+        bool[] blockVisible = new bool[100]; // 벽돌과 공의 충돌 여부를 나타내는 상태변수
 
         // 장애물 블록
-        int levelBlockW = 10;
-        int levelBlockH = 10;
-
+        int    levelBlockW          = 20;
+        int    levelBlockH          = 15;
+        int    nObstacleBlocks      = 1; // 장애물 블록 갯수 카운트
+        double xMoveDirectionNSpeed = 1; // 장애물 블록 진행 방향
+        Random randomBlockXY        = new Random();
+        Random randomMoveSpeed      = new Random();
+        Random randomBlockDirection = new Random();
         // 공
-        int    ballW = 15;
-        int    ballH = 15;
+        int    ballW = 10;
+        int    ballH = 10;
         double slope = 1; // 기울기
         double vDir  = 1; // 공 수직방향 여부
-        Random rand  = new Random(); // 시작할 때 떨어질 방향을 랜덤으로 주기 위한 난수
+        Random randomBall  = new Random(); // 시작할 때 떨어질 방향을 랜덤으로 주기 위한 난수
 
         // 라켓
         int racketY = 480;
         int racketW = 250;
         int racketH = 10;
-
-        int level = 1;
 
         public Form1()
         {
@@ -55,129 +53,133 @@ namespace Project4
             FormSize();           // 폼 사이즈
             g = CreateGraphics(); // 그래픽 객체 생성
             InitBlocks();         // 초기화-블럭
-            InitLevelBlocks();     // 초기화-장애물 블록
+            InitObstacleBlocks(); // 초기화-장애물 블록
             InitBall();           // 초기화-공 관련
             InitRacket();         // 초기화-라켓
         }
 
-        // 폼 사이즈
-        public void FormSize()
+        
+        public void FormSize() 
         {
             ClientSize = new Size(formW, formH);
             Text       = "BlockBreak v1.2";
-        }
+        } // 폼 사이즈
 
-        // 블록 초기화 메서드
         public void InitBlocks() 
         {
             for (int i = 0; i < nBlocks; i++)
             {
-                blocks[i] = new Rectangle(i % 10 * blockW,
-                                          blockY + blockH * (i / 10),
-                                          blockW - 1,
-                                          blockH - 1);
-                blockVisible[i] = true; // 블록 Visible 값 초기화
+                rBlocks[i] = new Rectangle(i % 10 * blockW,
+                                           blockY + blockH * (i / 10),
+                                           blockW - 1,
+                                           blockH - 1);
+                blockVisible[i] = true;
                 clearedBlocks = 0;
             }
-        }
+        } // 블록 초기화 메서드
 
-        // 장애물 블록 초기화 메서드
-        public void InitLevelBlocks()
+        public void InitObstacleBlocks() 
         {
-            for (int i = 0; i < level; i++)
+            for (int i = 0; i < nObstacleBlocks; i++)
             {
-                blocks[i] = new Rectangle(150,
-                                          150,
-                                          levelBlockW,
-                                          levelBlockH);
+                rObstacleBlocks[i] = new Rectangle(randomBlockXY.Next(50, 250),
+                                                   randomBlockXY.Next(150, 250),
+                                                   levelBlockW,
+                                                   levelBlockH);
+                //이동 속도
+                xMoveDirectionNSpeed = randomMoveSpeed.Next(50, 100) / 10.0;
+                // 이동 방향 초기화
+                if (randomBlockDirection.Next(2) % 2 == 1) xMoveDirectionNSpeed = -xMoveDirectionNSpeed;
             }
-        }
+        } // 장애물 블록 초기화 메서드
 
-        // 공 관련 초기화 메서드
-        public void InitBall()
+        public void InitBall() 
         {
-            ball        = new Rectangle();
-            ball.X      = formW / 2 - ballW / 2;
-            ball.Y      = blockY + nBlocks / 10 * blockH;
-            ball.Width  = ballW;
-            ball.Height = ballH;
+            rBall        = new Rectangle();
+            rBall.X      = formW / 2 - ballW / 2;
+            rBall.Y      = blockY + nBlocks / 10 * blockH;
+            rBall.Width  = ballW;
+            rBall.Height = ballH;
 
             // 기울기값 초기화
-            slope = rand.Next(5, 20) / 10.0;
-            if (rand.Next(2) % 2 == 1) slope = -slope;
+            slope = randomBall.Next(10, 20) / 10.0;
+            if (randomBall.Next(2) % 2 == 1) slope = -slope;
             vDir = 1;
+        } // 공 관련 초기화 메서드
+
+        public void InitRacket() // 라켓 초기화 메서드
+        {
+            rRacket.X      = formW / 2 - racketW / 2;
+            rRacket.Y      = racketY;
+            rRacket.Width  = racketW;
+            rRacket.Height = racketH;
+            
         }
 
-        // 라켓 초기화 메서드
-        public void InitRacket()
+        public void LevelUp()
         {
-            racket.X      = formW / 2 - racketW / 2;
-            racket.Y      = racketY;
-            racket.Width  = racketW;
-            racket.Height = racketH;
+            nObstacleBlocks++;
+            racketW -= 20;
         }
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            // 매개변수 nBlocks값 만큼 벽돌 생성
             for (int i = 0; i < nBlocks; i++)
             {
-                // blockVisible값이 true일 때만 그린다.
+                // blockVisible값이 true일 때만 블록 그리기
                 if (blockVisible[i] == true) 
-                    g.FillRectangle(blockColor, blocks[i]);
-            }
+                    g.FillRectangle(blockColor, rBlocks[i]);
+            } // 매개변수 nBlocks값 만큼 벽돌 생성
 
-            // 매개변수 level값 만큼 장애물 벽돌 생성
-            for (int i = 0; i <= level; i++)
+            for (int k = 0; k < nObstacleBlocks; k++)
             {
-                g.FillRectangle(levelColor, levelBlocks[i]);
-            }
+                //장애물 블록 그리기
+                g.FillRectangle(obstacleBlockColor, rObstacleBlocks[k]);
+                g.DrawRectangle(pen, rObstacleBlocks[k]);
+            } // 매개변수 nObstacleBlocks값 만큼 장애물 벽돌 생성
 
             // 라켓 그리기
-            g.FillRectangle(racketColor, racket);
+            g.FillRectangle(racketColor, rRacket);
 
             // 공 그리기
-            g.FillEllipse(ballColor, ball);
-            g.DrawEllipse(pen, ball);
+            g.FillEllipse(ballColor, rBall);
+            g.DrawEllipse(pen, rBall);
         }
 
         private void myTimer_Tick(object sender, EventArgs e)
         {
             double dx = 0;
-            double unit = ballW;
+            dx = ballW / slope;
+            rBall.X += (int)dx;
+            rBall.Y += (int)(vDir * slope * dx);
+            if (rBall.X < 0 || rBall.X > formW - ballW) slope = -slope;     // 공이 좌우 벽에 충돌(가로 방향 굴절)
+            if (rBall.Y < 0 || rRacket.IntersectsWith(rBall)) vDir = -vDir; // 공이 천장이나 라켓에 충돌(세로 방향 굴절) | Rectangle.IntersectsWith() :: 같은 Rectangle 객체가 충돌할 때 이벤트
 
-            dx = unit / 2 / slope;
-
-            ball.X += (int)dx;
-            ball.Y += (int)(vDir * slope * dx);
-
-            // 공과 좌우 벽이 충돌(가로 방향 굴절)
-            if (ball.X < 0 || ball.X > formW - ballW) // x : 1 ~ 489 범위 제한
-                slope = -slope;
-
-            // 공이 천장이나 라켓에 충돌(세로 방향 굴절)
-            if (ball.Y < 0 || racket.IntersectsWith(ball)) // Rectangle.IntersectsWith() :: 같은 Rectangle 객체가 충돌할 때 이벤트
-                vDir = -vDir;
-
-            // 공은 자꾸 움직임
-
-
-            // 공이 장애물 벽돌과 충돌(반대 방향 굴절)
-            for (int i = 0; i <= nLevel; i++)
+            double bx = 0;
+            bx = levelBlockW / xMoveDirectionNSpeed;
+            
+            for (int i = 0; i < nObstacleBlocks; i++)
             {
-                if (levelVisible[i] == true && levelBlocks[i].IntersectsWith(ball))
+                rObstacleBlocks[i].X += (int)bx;
+                
+                if (rObstacleBlocks[i].X < 0 || rObstacleBlocks[i].X > formW - levelBlockW)
+                {
+                    xMoveDirectionNSpeed = -xMoveDirectionNSpeed;
+                }
+                
+                if (rObstacleBlocks[i].IntersectsWith(rBall))
                 {
                     vDir = -vDir;
-                }
-            }
+                } // 공이 장애물 벽돌과 충돌(반대 방향 굴절)
 
-            // 공과 벽돌이 충돌시 체크
+            } // 장애물 블록 트리거
+
             for (int i = 0; i <= nBlocks; i++)
             {
-                if (blockVisible[i] == true && blocks[i].IntersectsWith(ball))
+                if (blockVisible[i] == true && rBlocks[i].IntersectsWith(rBall))
                 {
-                    vDir = -vDir;            // 충돌 방향과 반대 방향 굴절
                     blockVisible[i] = false; // 벽돌은 안 보이게 비활성화
+                    vDir = -vDir;            // 충돌 방향과 반대 방향 굴절
 
                     if (++clearedBlocks >= nBlocks)
                     {
@@ -187,53 +189,48 @@ namespace Project4
                                                               MessageBoxButtons.YesNo);
                         if (result == DialogResult.Yes)
                         {
+                            LevelUp();
                             InitBlocks();
+                            InitObstacleBlocks();
                             InitRacket();
                             InitBall();
-                            level++;
-                            Console.WriteLine($"Now level : {level}");
-                            racketW -= 20;
-                            Console.WriteLine($"라켓의 너비가 {racketW}이 됐습니다.");
                             myTimer.Start();
                         }
                         else Close();
                     }
-                    //Console.WriteLine(clearedBlocks);
                 }
-            }
+            } // 공/벽돌 상호작용, 게임 클리어
 
-            // 게임오버 :: 공이 클라이언트 세로축을 초과할 때
-            if (ball.Y > ClientSize.Height)
+            if (rBall.Y > ClientSize.Height)
             {
-                myTimer.Stop(); // 화면 로딩 멈춤 :: ticker 멈춤
+                myTimer.Stop(); // 화면 로딩 멈춤 - ticker 멈춤
                 DialogResult result = MessageBox.Show("다시 시작하시겠습니까?",
                                                       "확인",
                                                       MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     InitBlocks();
+                    InitObstacleBlocks();
                     InitRacket();
                     InitBall();
                     myTimer.Start();
                 }
                 else Close();
-            }
+            } // 게임오버 - 공이 클라이언트 세로축을 초과할 때
 
             Invalidate();
         }
-
-        // 키보드 조작
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        
+        private void Form1_KeyDown(object sender, KeyEventArgs e) // 키보드 조작
         {
             if (e.KeyCode == Keys.Left)
-                racket.X -= 40;                                             // ← 이동 폭
-                if (racket.X < 0) racket.X = 0;                             // ← 화면 초과 금지
+                rRacket.X -= 40;                                              // ← 이동 폭
+                if (rRacket.X < 0) rRacket.X = 0;                             // ← 화면 초과 금지
             else if (e.KeyCode == Keys.Right)
-                racket.X += 40;                                             // → 이동 폭
-                if (racket.X > formW - racketW) racket.X = formW - racketW; // → 화면 초과 금지
-            else if (e.KeyCode == Keys.Space) myTimer.Stop();               // 정지
-            else if (e.KeyCode == Keys.Enter) myTimer.Start();              // 재개
-                
+                rRacket.X += 40;                                              // → 이동 폭
+                if (rRacket.X > formW - racketW) rRacket.X = formW - racketW; // → 화면 초과 금지
+            else if (e.KeyCode == Keys.Space) myTimer.Stop();                 // 정지
+            else if (e.KeyCode == Keys.Enter) myTimer.Start();                // 재개
             Invalidate();
         }
     }
@@ -246,7 +243,7 @@ namespace Project4
 // 추가 고려할 점
 // ＃[★]모듈화
 // ＃[★]일시정지, 재개 버튼 추가 (대신 정지 상태에서 바가 움직임)
-// ＃[未]클리어 후 레벨 추가(클리어 할 때 마다 라켓이 작아짐, 움직이는 장애물 추가)
+// ＃[★]클리어 후 레벨 추가(클리어 할 때 마다 라켓이 작아짐, 움직이는 장애물 추가)
 // ＃[未]게임 시작 -> Die -> 기록 저장란 출력(시간(자동), 스코어(자동), 레벨(자동), 이름)
 // ＃[未]실시 시간(1s = -10점) / 라운드 보너스(+1,000, +3,000, +5,000) / 블록 한 개 제거(+100) / 블록 연속 파괴 점수(100 + 20 *= 2)
 // ＃[未]데이터베이스 연동
