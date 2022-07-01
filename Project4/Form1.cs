@@ -23,18 +23,19 @@ namespace Project4
         int blockY  = 50;
         int blockW  = 30;
         int blockH  = 20;
-        int nBlocks = 1;
+        int nBlocks = 20;
         int clearedBlocks = 0; // 파괴된 블록 카운트
         bool[] blockVisible = new bool[100]; // 벽돌과 공의 충돌 여부를 나타내는 상태변수
 
         // 장애물 블록
-        int    levelBlockW          = 20;
-        int    levelBlockH          = 15;
+        int    levelBlockW          = 30;
+        int    levelBlockH          = 10;
         int    nObstacleBlocks      = 1; // 장애물 블록 갯수 카운트
         double xMoveDirectionNSpeed = 1; // 장애물 블록 진행 방향
         Random randomBlockXY        = new Random();
         Random randomMoveSpeed      = new Random();
         Random randomBlockDirection = new Random();
+
         // 공
         int    ballW = 10;
         int    ballH = 10;
@@ -44,7 +45,7 @@ namespace Project4
 
         // 라켓
         int racketY = 480;
-        int racketW = 250;
+        int racketW = 150;
         int racketH = 10;
 
         public Form1()
@@ -62,7 +63,7 @@ namespace Project4
         public void FormSize() 
         {
             ClientSize = new Size(formW, formH);
-            Text       = "BlockBreak v1.2";
+            Text       = "BlockBreak v1.3";
         } // 폼 사이즈
 
         public void InitBlocks() 
@@ -90,6 +91,7 @@ namespace Project4
                 xMoveDirectionNSpeed = randomMoveSpeed.Next(50, 100) / 10.0;
                 // 이동 방향 초기화
                 if (randomBlockDirection.Next(2) % 2 == 1) xMoveDirectionNSpeed = -xMoveDirectionNSpeed;
+                lbLevel.Text = $"Now Level is : {nObstacleBlocks}";
             }
         } // 장애물 블록 초기화 메서드
 
@@ -149,7 +151,7 @@ namespace Project4
         private void myTimer_Tick(object sender, EventArgs e)
         {
             double dx = 0;
-            dx = ballW / slope;
+            dx = ballW / 2 / slope;
             rBall.X += (int)dx;
             rBall.Y += (int)(vDir * slope * dx);
             if (rBall.X < 0 || rBall.X > formW - ballW) slope = -slope;     // 공이 좌우 벽에 충돌(가로 방향 굴절)
@@ -184,7 +186,7 @@ namespace Project4
                     if (++clearedBlocks >= nBlocks)
                     {
                         myTimer.Stop(); // 화면 로딩 멈춤 :: ticker 멈춤
-                        DialogResult result = MessageBox.Show("클리어 하셨습니다. 다음 레벨을 진행하시겠습니까?",
+                        DialogResult result = MessageBox.Show($"축하드립니다. {nObstacleBlocks}레벨을 클리어 하셨습니다. \n다음 레벨을 진행하시겠습니까?",
                                                               "확인",
                                                               MessageBoxButtons.YesNo);
                         if (result == DialogResult.Yes)

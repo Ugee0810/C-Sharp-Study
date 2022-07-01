@@ -506,6 +506,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 595);
+            this.Controls.Add(this.btn4);
             this.Controls.Add(this.btnForm5);
             this.Controls.Add(this.btnForm2);
             this.Controls.Add(this.gbYear);
@@ -520,7 +521,6 @@
             this.Controls.Add(this.chbFruit1);
             this.Controls.Add(this.lb4);
             this.Controls.Add(this.lbTitle3);
-            this.Controls.Add(this.btn4);
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
