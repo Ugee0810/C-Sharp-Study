@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1302\\Desktop\\Study\\Backjun\\Backjun.csproj",
+      "projectUniqueName": "C:\\Users\\1302\\Desktop\\SHU\\Study\\Backjun\\Backjun.csproj",
       "projectName": "Backjun",
-      "projectPath": "C:\\Users\\1302\\Desktop\\Study\\Backjun\\Backjun.csproj",
+      "projectPath": "C:\\Users\\1302\\Desktop\\SHU\\Study\\Backjun\\Backjun.csproj",
       "packagesPath": "C:\\Users\\1302\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1302\\Desktop\\Study\\Backjun\\obj\\",
+      "outputPath": "C:\\Users\\1302\\Desktop\\SHU\\Study\\Backjun\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\1302\\AppData\\Roaming\\NuGet\\NuGet.Config",

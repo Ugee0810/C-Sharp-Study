@@ -857,11 +857,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\1302\\Desktop\\Study\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\1302\\Desktop\\SHU\\Study\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\1302\\Desktop\\Study\\Test\\Test.csproj",
+      "projectPath": "C:\\Users\\1302\\Desktop\\SHU\\Study\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\1302\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\1302\\Desktop\\Study\\Test\\obj\\",
+      "outputPath": "C:\\Users\\1302\\Desktop\\SHU\\Study\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\1302\\AppData\\Roaming\\NuGet\\NuGet.Config",
