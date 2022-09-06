@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\1302\\Desktop\\SHU\\Study\\Ch05\\Ch05.csproj": {}
+    "C:\\Users\\song\\Desktop\\Study_C-Sharp\\Ch05\\Ch05.csproj": {}
   },
   "projects": {
-    "C:\\Users\\1302\\Desktop\\SHU\\Study\\Ch05\\Ch05.csproj": {
+    "C:\\Users\\song\\Desktop\\Study_C-Sharp\\Ch05\\Ch05.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\1302\\Desktop\\SHU\\Study\\Ch05\\Ch05.csproj",
+        "projectUniqueName": "C:\\Users\\song\\Desktop\\Study_C-Sharp\\Ch05\\Ch05.csproj",
         "projectName": "Ch05",
-        "projectPath": "C:\\Users\\1302\\Desktop\\SHU\\Study\\Ch05\\Ch05.csproj",
-        "packagesPath": "C:\\Users\\1302\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\1302\\Desktop\\SHU\\Study\\Ch05\\obj\\",
+        "projectPath": "C:\\Users\\song\\Desktop\\Study_C-Sharp\\Ch05\\Ch05.csproj",
+        "packagesPath": "C:\\Users\\song\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\song\\Desktop\\Study_C-Sharp\\Ch05\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\1302\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\song\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -54,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
