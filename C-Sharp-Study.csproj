@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>C_Sharp_Study</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="01.Csharp\" />
+    <Folder Include="02.Object-oriented-Programming\" />
+    <Folder Include="03.Grammar\" />
+    <Folder Include="04.DataStructure\" />
+    <Folder Include="05.Algorithm\" />
+    <Folder Include="07.CordingTest\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="08.Class\Book\Book.csproj" />
+    <None Include="08.Class\Ch01\Ch01.csproj" />
+    <None Include="08.Class\Ch02\Ch02.csproj" />
+    <None Include="08.Class\Ch03\Ch03.csproj" />
+    <None Include="08.Class\Ch04\Ch04.csproj" />
+    <None Include="08.Class\Ch05\Ch05.csproj" />
+    <None Include="08.Class\Ch06\Ch06.csproj" />
+    <None Include="08.Class\CH07\Ch07.csproj" />
+    <None Include="08.Class\Ch08\Ch08.csproj" />
+    <None Include="08.Class\Ch09\Ch09.csproj" />
+    <None Include="08.Class\Ch10\Ch10.csproj" />
+    <None Include="08.Class\Ch11\Ch11.csproj" />
+    <None Include="08.Class\Test\Test.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.30" />
+  </ItemGroup>
+
+</Project>
