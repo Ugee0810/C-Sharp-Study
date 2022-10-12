@@ -14,7 +14,6 @@
     <Folder Include="03.Grammar\" />
     <Folder Include="04.DataStructure\" />
     <Folder Include="05.Algorithm\" />
-    <Folder Include="07.CordingTest\" />
   </ItemGroup>
 
   <ItemGroup>
